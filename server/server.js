@@ -27,7 +27,7 @@ app.set('port', 3000);
 // Instead have a router to tell the server
 // what path to take?? 
 
-app.use('/home', router);
+app.use('/quiz', router);
 
 //pass the name of the directory that contains the 
 //static client files so they can be loaded

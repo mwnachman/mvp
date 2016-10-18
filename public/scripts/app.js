@@ -1,6 +1,6 @@
 var app = {
 
-  server: 'http://localhost:3000/',
+  server: 'http://localhost:3000/quiz',
 
   init: function() {
 
@@ -16,44 +16,37 @@ var app = {
 
 
   send: function(data) {
+    console.log('data in send func', data);
 
-    app.clearForm();
-
-
-    // $.ajax({
-    //   url: app.server + 'results',
-    //   type: 'POST'
-    // })
-
-
+    $.ajax({
+      url: app.server + "/score",
+      type: 'POST', 
+      data: JSON.stringify(data),
+      success: function (data) {
+        app.$email.val('');
+        console.log('it worked!', data);
+      }, 
+      error: function(error) {
+        console.error('Failed to send answers ', error);
+      }
+    });
   },
-
-  clearForm: function() {
-
-   // $('form input[type=submit]').attr('disabled', 'true');
-
-  },
-
 
 
 
   handleSubmit: function(event) {
+    
+    var email = app.$email.val();
+    var score = app.scoreTest();
 
     var data = {
+      email: email,
+      score: score
+    };
 
-    }
+    console.log('in handlesubmit', data); 
 
-    console.log(event.target); 
-
-
-    // app.send(data);
-
-
-
-    // var score = app.scoreTest(event);
-    // console.log('score in handlesubmit', score);
-    // console.log('email', app.$email.val());
-
+    app.send(data);
     
   },
 
