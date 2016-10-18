@@ -1,54 +1,57 @@
 var http = require('http');
+var express = require('express');
+var db = require('./db')
 var fs = require('fs');
 var path = require('path');
 var utils = require('./utils');
+var morgan = require('morgan');
+var parser = require('body-parser');
+var router = require('./router');
+
 
 var port = 3000;
 
-
-// Angular has to run on lives-server, though, so not sure how to 
+// Angular has to run on live-server, though, so not sure how to 
 // deal with this if I incorporate Angular.
 var ip = '127.0.0.1';
 
 
-var mimeLookup = {
-  '.js': 'application/javascript',
-  '.html': 'text/html'
-};
+var app = express();
+module.exports.app = app;
+
+app.set('port', 3000);
+// app.use(morgan('dev'));
+// app.use(parser.json());
 
 
 // Instead have a router to tell the server
-// what path to take??                 
+// what path to take?? 
+
+app.use('/home', router);
+
+
+app.use(express.static(__dirname + '/../public'));
+
+// var server = http.createServer( function(req, res) {
+//   if (req.method === 'GET') {
+//     utils.get(req, res);
+//   } else if (req.method === 'POST'){
+//     console.log('posting', req.method);
+//     utils.post(req, res);
+//   } else {
+//     utils.send404(res);
+//   }
+// });
+
+if (!module.parent) {
+  app.listen(app.get('port'));
+  console.log('Listening on', app.get('port'));
+}
 
 
 
-var server = http.createServer( function(req, res) {
-  if (req.method === 'GET') {
-    var fileurl;
-    if (req.url === '/') {
-      fileurl = '/index.html';
-    } else {
-      fileurl = req.url;
-    }
-    var filepath = path.resolve('./public' + fileurl);
-    var fileExt = path.extname(filepath);
-    var mimeType = mimeLookup[fileExt];
-    if (!mimeType) {
-      utils.send404(res);
-      return;
-    }
-    fs.exists(filepath, function(exists) {
-      // console.log('filepath', filepath);
-      res.writeHead(200, {'Content-Type': mimeType});
-      fs.createReadStream(filepath).pipe(res);
-    });
-  } else {
-    utils.send404(res);
-  }
-});
 
-server.listen(port, ip);
-console.log('server listening');
+
 
 
 
