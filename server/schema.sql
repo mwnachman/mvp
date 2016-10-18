@@ -8,19 +8,19 @@ CREATE TABLE users (
   score int
 );
 
--- CREATE TABLE tests (
---   id int PRIMARY KEY AUTO_INCREMENT,
---   name varchar(255)
--- );
+CREATE TABLE tests (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  name varchar(255)
+);
 
--- CREATE TABLE results (
---   id int PRIMARY KEY AUTO_INCREMENT,
---   userId int,
---   testId int,
---   score int,
---   FOREIGN KEY (userId) REFERENCES users(id),
---   FOREIGN KEY (testId) REFERENCES tests(id)
--- );
+CREATE TABLE results (
+  id int PRIMARY KEY AUTO_INCREMENT,
+  userId int,
+  testId int,
+  score int,
+  FOREIGN KEY (userId) REFERENCES users(id),
+  FOREIGN KEY (testId) REFERENCES tests(id)
+);
 
 
 /*  Execute this file from the command line by typing:

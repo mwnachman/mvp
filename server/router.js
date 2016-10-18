@@ -1,10 +1,12 @@
-var utils = require('./utils'); 
+var controller = require('./controller'); 
 var router = require('express').Router();
 
-// router.get('/questions', utils.get);
 
-router.post('/score', utils.getScore); //need different callback
+// router.get('/questions', controller.get);
 
+router.post('/score', controller.post); 
+
+// router.options('/score', controller.options);
 
 
 module.exports = router;
