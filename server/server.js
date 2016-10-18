@@ -29,7 +29,8 @@ app.set('port', 3000);
 
 app.use('/home', router);
 
-
+//pass the name of the directory that contains the 
+//static client files so they can be loaded
 app.use(express.static(__dirname + '/../public'));
 
 // var server = http.createServer( function(req, res) {

@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 // var db = require('../db');
-var parser = require('body-parser');
+
 
 
 var mimeLookup = {
@@ -24,7 +24,7 @@ exports.get = function(req, res) {
     return;
   }
   fs.exists(filepath, function(exists) {
-    // console.log('filepath', filepath);
+    console.log('filepath', filepath);
     res.writeHead(200, {'Content-Type': mimeType});
     fs.createReadStream(filepath).pipe(res);
   });
