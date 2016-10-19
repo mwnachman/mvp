@@ -3,6 +3,8 @@
   <title>Abbreviated NPI</title>
   <script src="scripts/app.js"></script>
   <script src="http://code.jquery.com/jquery-3.1.1.min.js"  crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
@@ -13,206 +15,367 @@
 
   </h1>
 
-  <h3>
+  <div id='test'>
 
-    In honor of the 2016 presidential election, take this abbreviated version of the Narcissistic Personality Inventory and compare yourself to Potential POTUS!
+    <h3>
 
-  </h3>
+      In honor of the 2016 presidential election, take this abbreviated version of the Narcissistic Personality Inventory and compare yourself to Potential POTUS!
 
-  <p>
+    </h3>
 
-    Instructions:
-    <br>
-    <br>
-    For each pair of items choose the one that you most identify with.  
-    <br>
-    If you identify with both equally choose which one you think is most important.
-  
-  </p>
+    <p>
 
-  <form action="#" id="send" method="post">
+      Instructions:
+      <br>
+      <br>
+      For each pair of items choose the one that you most identify with.  
+      <br>
+      If you identify with both equally choose which one you think is most important.
+    
+    </p>
 
-    <table style="max-width:700px;">
+    <form action="#" id="send" method="post">
 
-      <tbody>
+      <table style="max-width:700px;">
 
+        <tbody id="table_body">
 
 
 
 
-        <tr>
 
-          <td width="15px"></td>
+          <tr>
 
-          <td>
+            <td width="15px"></td>
 
-            <input id="Q1a" type="radio" name="Q1" value="1">
-            <label for="Q1a">
-              I always know what I am doing.
-            </label>    
+            <td>
 
-            <br>
-            
-            <input id="Q1b" type="radio" name="Q1" value="0">
-            <label for="Q1b">
-              Sometimes I am not sure of what I am doing. 
-            </label>
+              <input id="Q1a" type="radio" name="Q1" value="1">
+              <label for="Q1a">
+                I always know what I am doing.
+              </label>    
 
-          </td>
+              <br>
+              
+              <input id="Q1b" type="radio" name="Q1" value="0">
+              <label for="Q1b">
+                Sometimes I am not sure of what I am doing. 
+              </label>
 
-        </tr>
+            </td>
 
-        <tr>
+          </tr>
 
-          <td height="20px"></td>
+          <tr>
 
-        </tr>
+            <td height="20px"></td>
 
+          </tr>
 
 
 
 
 
-        <tr>
 
-          <td width="15px"></td>
+          <tr>
 
-          <td>
+            <td width="15px"></td>
 
-            <input id="Q2a" type="radio" name="Q2" value="1">
-            <label for="Q2a">
-              I like to have authority over other people.
-            </label>    
+            <td>
 
-            <br>
-            
-            <input id="Q2b" type="radio" name="Q2" value="0">
-            <label for="Q2b">
-              I don't mind following orders.
-            </label>
+              <input id="Q2a" type="radio" name="Q2" value="1">
+              <label for="Q2a">
+                I like to have authority over other people.
+              </label>    
 
-          </td>
+              <br>
+              
+              <input id="Q2b" type="radio" name="Q2" value="0">
+              <label for="Q2b">
+                I don't mind following orders.
+              </label>
 
-        </tr>
+            </td>
 
-        <tr>
+          </tr>
 
-          <td height="20px"></td>
+          <tr>
 
-        </tr>
+            <td height="20px"></td>
 
+          </tr>
 
 
 
 
 
-        <tr>
 
-          <td width="15px"></td>
+          <tr>
 
-          <td>
+            <td width="15px"></td>
 
-            <input id="Q3a" type="radio" name="Q3" value="1">
-            <label for="Q3a">
-              I insist upon getting the respect that is due me.            
-            </label>    
+            <td>
 
-            <br>
-            
-            <input id="Q3b" type="radio" name="Q" value="0">
-            <label for="Q3b">
-              I usually get the respect that I deserve.
-            </label>
+              <input id="Q3a" type="radio" name="Q3" value="1">
+              <label for="Q3a">
+                I insist upon getting the respect that is due me.            
+              </label>    
 
-          </td>
+              <br>
+              
+              <input id="Q3b" type="radio" name="Q" value="0">
+              <label for="Q3b">
+                I usually get the respect that I deserve.
+              </label>
 
-        </tr>
+            </td>
 
-        <tr>
+          </tr>
 
-          <td height="20px"></td>
+          <tr>
 
-        </tr>
+            <td height="20px"></td>
 
+          </tr>
 
 
 
 
-        <tr>
 
-          <td width="15px"></td>
+          <tr>
 
-          <td>
+            <td width="15px"></td>
 
-            <input id="Q4a" type="radio" name="Q4" value="1">
-            <label for="Q4a">
-              I try not to be a show off.           
-            </label>    
+            <td>
 
-            <br>
-            
-            <input id="Q4b" type="radio" name="Q4" value="0">
-            <label for="Q4b">
-              I will usually show off if I get the chance.
-            </label>
+              <input id="Q4a" type="radio" name="Q4" value="1">
+              <label for="Q4a">
+                I will usually show off if I get the chance.    
+              </label>    
 
-          </td>
+              <br>
+              
+              <input id="Q4b" type="radio" name="Q4" value="0">
+              <label for="Q4b">
+                I try not to be a show off.
+              </label>
 
-        </tr>
+            </td>
 
-        <tr>
+          </tr>
 
-          <td height="20px"></td>
+          <tr>
 
-        </tr>
+            <td height="20px"></td>
 
+          </tr>
 
 
 
 
-        <tr>
 
-          <td width="15px"></td>
+          <tr>
 
-          <td>
+            <td width="15px"></td>
 
-            <input id="Q5a" type="radio" name="Q5" value="1">
-            <label for="Q5a">
-              I would prefer to be a leader.           
-            </label>    
+            <td>
 
-            <br>
-            
-            <input id="Q5b" type="radio" name="Q5" value="0">
-            <label for="Q5b">
-              It makes little difference to me whether I am a leader or not.
-            </label>
+              <input id="Q5a" type="radio" name="Q5" value="1">
+              <label for="Q5a">
+                I would prefer to be a leader.           
+              </label>    
 
-          </td>
+              <br>
+              
+              <input id="Q5b" type="radio" name="Q5" value="0">
+              <label for="Q5b">
+                It makes little difference to me whether I am a leader or not.
+              </label>
 
-        </tr>
+            </td>
 
-        <tr>
+          </tr>
 
-          <td height="20px"></td>
+          <tr>
 
-        </tr>
+            <td height="20px"></td>
 
+          </tr>
 
 
-      </tbody>
 
-    </table>
 
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email"/>
-        <br>
-        <br>
-        <input type="submit" name="submit" class="submit"/>
-      
-  </form>
+          <tr>
+
+            <td width="15px"></td>
+
+            <td>
+
+              <input id="Q6a" type="radio" name="Q6" value="1">
+              <label for="Q6a">
+                I can usually talk my way out of anything.           
+              </label>    
+
+              <br>
+              
+              <input id="Q6b" type="radio" name="Q6" value="0">
+              <label for="Q6b">
+                I try to accept the consequences of my behavior.
+              </label>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="20px"></td>
+
+          </tr>
+
+
+
+   
+          <tr>
+
+            <td width="15px"></td>
+
+            <td>
+
+              <input id="Q7a" type="radio" name="Q7" value="1">
+              <label for="Q7a">
+                I am assertive.           
+              </label>    
+
+              <br>
+              
+              <input id="Q7b" type="radio" name="Q7" value="0">
+              <label for="Q7b">
+                I wish I were more assertive.
+              </label>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="20px"></td>
+
+          </tr>
+
+
+
+
+          <tr>
+
+            <td width="15px"></td>
+
+            <td>
+
+              <input id="Q8a" type="radio" name="Q8" value="1">
+              <label for="Q8a">
+                I know that I am good because everybody keeps telling me so.           
+              </label>    
+
+              <br>
+              
+              <input id="Q8b" type="radio" name="Q8" value="0">
+              <label for="Q8b">
+                When people compliment me I sometimes get embarrassed.
+              </label>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="20px"></td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td width="15px"></td>
+
+            <td>
+
+              <input id="Q9a" type="radio" name="Q9" value="1">
+              <label for="Q9a">
+                I wish somebody would someday write my biography.          
+              </label>    
+
+              <br>
+              
+              <input id="Q9b" type="radio" name="Q9" value="0">
+              <label for="Q9b">
+                I don't like people to pry into my life for any reason.
+              </label>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="20px"></td>
+
+          </tr>
+
+
+
+          <tr>
+
+            <td width="15px"></td>
+
+            <td>
+
+              <input id="Q10a" type="radio" name="Q10" value="1">
+              <label for="Q10a">
+                I am an extraordinary person.           
+              </label>    
+
+              <br>
+              
+              <input id="Q10b" type="radio" name="Q10" value="0">
+              <label for="Q10b">
+                I am much like everybody else.
+              </label>
+
+            </td>
+
+          </tr>
+
+          <tr>
+
+            <td height="20px"></td>
+
+          </tr>
+
+
+
+
+        </tbody>
+
+      </table>
+
+          <label for="email">Email: </label>
+          <input type="email" name="email" id="email"/>
+          <br>
+          <br>
+          <input type="submit" name="submit" class="submit"/>
+        
+    </form>
+
+  </div>
 
   <p id="result"></p>  
+  <p id="however"></p>
+  <p id="explanation"></p>
+  <p id="adjustedAverage"></p>
 
   <script>
     $(function(){

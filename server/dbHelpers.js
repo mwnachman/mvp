@@ -1,6 +1,5 @@
 var db = require('./db');
 
-
 exports.postData = function(email, score) {
 
   console.log('in db helpers func', email, score);
@@ -15,4 +14,13 @@ exports.postData = function(email, score) {
   	}
   });	
 
+  return new Promise(function(resolve, reject) {
+    db.connection.query('SELECT * FROM users WHERE email=?', email, function(err, rows) {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve(rows);
+    });
+  });
 };
